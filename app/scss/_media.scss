@@ -1,0 +1,110 @@
+@media (max-width: 950px) {
+  .advantages-img{
+    margin-bottom: 110px;
+  }
+}
+
+
+@media (max-width: 780px) {
+  .advantages-img{
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 740px) {
+  .tesla-info{
+    flex-direction: column;
+  }
+  
+  .tesla-video__inner{
+    margin-bottom: 50px;
+  }
+  .tesla-text{
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .tesla-interior__items{
+    flex-direction: column;
+  }
+  .tesla-interior__description{
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .tesla-description__block{
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .tesla-speed__description{
+    flex-direction: column;
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+  .tesla-advantages__description{
+    flex-direction: column-reverse;
+  }
+  .tesla-advantages__title{
+    left: 0;
+    top: 0;
+  }
+  .tesla-speed__text{
+    margin-top: 50px;
+  }
+  .tesla-advantages__text{
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+  .tesla-speed__text{
+    margin-bottom: 40px;
+  }
+  
+}
+
+@media (max-width: 520px) {
+  .tesla-interior__text{
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .tesla-info__img{
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo img{
+    width: 200px;
+  }
+  .header-content__title{
+    font-size: 72px;
+  }
+
+  .menu-sections__inner a{
+    font-size: 26px;
+    line-height: 40px;
+    padding: 20px 0px 14px 0;
+    min-width: 100%
+  }
+  
+  .tesla-numbers{
+    margin-left: 0;
+  }
+
+  .tesla-description{
+    padding-top: 30px;
+  }
+
+  .tesla-inner{
+    margin-top: 50px;
+  }
+  .tesla-footer__ul{
+    font-size: 20px;
+  }
+  
+}
+
+@media (max-width: 420px) {
+  .tesla-footer__ul{
+    font-size: 18px;
+  }
+}

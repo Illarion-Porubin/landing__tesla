@@ -1,0 +1,383 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  font-family: Roboto Condensed;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.35);
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding-top: 36px;
+}
+
+.menu-btn {
+  border: 1px solid #fff;
+  width: 60px;
+  height: 60px;
+  margin-top: 31px;
+  &__line {
+    height: 2px;
+    width: 36px;
+    margin-top: 10px;
+    margin-left: 12px;
+    background-color: #fff;
+  }
+  &__line:first-child {
+    margin-top: 17px;
+  }
+}
+
+//menu-btn__inner
+
+.menu-btn__inner {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  transition: all .5s;
+  z-index: 10;
+}
+
+.menu-btn__inner.active{
+    left: 0;
+}
+
+.menu-sections {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.close-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 31px;
+  right: 0;
+  cursor: pointer;
+  &::after,
+  &::before {
+    content: "";
+    width: 70px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    transform-origin: left; //указывает начало координат преобразования (трансформации) элемента.
+  }
+  &::after {
+    transform: rotate(45deg);  
+  }
+  &::before {
+    transform: rotate(-45deg);
+    bottom: -1px; //смещаем before ниже
+  }
+}
+
+.menu-sections__inner{
+  width: 100%;
+}
+
+
+.menu-sections__inner a {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  padding: 30px 25px 14px 0;
+  border-bottom: 3px solid #690102;
+  display: inline-block;
+  min-width: 368px;
+  transition: all 0.3s;
+  &:hover {
+    border-color: #fff;
+    transform: scale(1.2); //увеличиваем текст
+    margin-left: 75px;
+    //transform:translate(160px)//смещаем эллемент
+  }
+}
+
+.menu-sections__inner li {
+  list-style: none;
+}
+
+//header
+
+.header-content__title {
+  font-size: 96px;
+  line-height: 112px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.header-content__text {
+  width: 284px;
+  margin-bottom: 25px;
+}
+
+.tesla__btn {
+  display: inline-block;
+  padding: 30px 62px;
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+  &:hover {
+    background-color: #690102;
+  }
+}
+
+.header-info__slider {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.point-slider {
+  display: flex;
+  bottom: 0;
+  position: absolute;
+  bottom: 26px;
+}
+
+.slider-top .slick-dots button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #0b0b0b;
+  border: none;
+  padding: 0;
+  font-size: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.slider-top .slick-dots .slick-active button {
+  background-color: #fff;
+}
+
+.slider-top .slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slider-top .slick-dots {
+  margin: -55px auto 0;
+  position: relative;
+  z-index: 6;
+  max-width: 1230px;
+  padding: 0 15px;
+}
+
+//tesla-info
+
+.tesla-inner {
+  margin: 155px 0 100px;
+}
+
+.tesla-info {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.tesla-numbers {
+  font-size: 96px;
+  line-height: 112px;
+  margin-left: 35px;
+  margin-bottom: 7px;
+  position: relative;
+  font-family: Roboto;
+  span {
+    font-size: 24px;
+    line-height: 28px;
+    font-family: Roboto Condensed;
+  }
+}
+
+.tesla-numbers--speed {
+  display: inline-block;
+  position: relative;
+}
+
+.tesla-numbers--speed::before {
+  content: "+";
+  font-size: 24px;
+  line-height: 28px;
+  position: absolute;
+  left: 165px;
+}
+
+.tesla-description {
+  margin-bottom: 19px;
+}
+
+.tesla-features {
+  color: #b70021;
+}
+
+.tesla-video__inner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+//tesla-description
+
+
+.tesla-description__block{
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.tesla-speed__description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+.tesla-advantages__description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.tesla-speed__text{
+  width: 303px;
+  height: 112px;
+}
+
+.tesla-info__img{
+  display: flex;
+}
+
+.tesla-info__img img{
+  width: 100%;
+}
+
+.advantages-img{
+  margin-bottom: 230px;
+}
+
+.tesla-advantages__text{
+  list-style: none;
+  padding: 0;
+}
+
+.tesla-advantages__title{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.info-text{
+  color: #b70021
+}
+
+
+//tesla-interior
+
+.tesla-interior__img {
+  margin-bottom: 100px;
+}
+
+.tesla-interior__img img,
+.tesla-interior__items{
+  width: 100%;
+}
+
+.tesla-interior__items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tesla-interior__num {
+  color: #b70021;
+}
+
+.tesla-interior__description {
+  max-width: 570px;
+  width: 100%;
+  padding-right: 55px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tesla-interior__text {
+  width: 80%;
+  position: relative;
+  margin-bottom: 100px;
+  padding-top: 25px;
+}
+
+//footer
+
+.tesla-footer {
+  background-color: #690102;
+  padding: 83px 0 20px;
+}
+
+.footer-btn {
+  text-align: center;
+  margin-bottom: 83px;
+}
+
+.tesla-footer__links {
+  text-align: center;
+  font-weight: 700;
+}
+
+.tesla-footer__ul{
+  padding-left: 0;
+}
+
+.tesla-footer__ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+}
+
+.tesla-footer__ul li + li::before {
+  content: "|"; //вставится перед каждой li, кроме 1
+  position: absolute;
+  left: -5px;
+}
+
+@import "media";
